@@ -1,5 +1,5 @@
 <?php
-// Replace with your actual business email
+
 $to = 'bestofky@aol.com';
 $subject = 'New Estimate Request';
 

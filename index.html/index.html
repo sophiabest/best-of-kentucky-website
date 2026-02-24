@@ -114,10 +114,33 @@
         }
 
         /* Hero */
+
         .hero {
-            background: #F8F6F2;
+            background: url('/images/herobanner.png') no-repeat center center;
+            background-size: cover;
             text-align: center;
             padding: 150px 20px 100px;
+            position: relative;
+            color: #fff;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(248, 246, 242, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 0;
+        }
+
+        .hero h1,
+        .hero p,
+        .hero .buttons {
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
@@ -207,6 +230,7 @@
             font-family: 'Playfair Display', serif;
             margin-bottom: 15px;
             font-size: 24px;
+            text-align: center;
         }
 
         /* Legacy Section */
