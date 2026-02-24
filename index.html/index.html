@@ -1,242 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best of Kentucky - Commercial Upholstery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <style>
         /* General Reset */
-        * {margin:0; padding:0; box-sizing:border-box;}
-        body {font-family:'Montserrat', sans-serif; color:#2B2B2B; background:#F8F6F2; line-height:1.6;}
-        a {text-decoration:none; color:inherit;}
-        button {cursor:pointer; border:none;}
-        img {max-width:100%; display:block;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #2B2B2B;
+            background: #F8F6F2;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
         /* Navigation */
-        nav {background:#fff; padding:20px 50px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000;}
-        .nav-logo {font-family:'Playfair Display', serif; font-size:24px; font-weight:700; color:#2B2B2B;}
-        .nav-logo span {color:#B89B5E; font-weight:400; font-size:16px; display:block;}
-        .nav-links {display:flex; gap:30px; align-items:center;}
-        .nav-links a {font-weight:500; transition: all 0.3s; position:relative;}
-        .nav-links a:hover::after {content:''; position:absolute; width:100%; height:2px; background:#B89B5E; bottom:-5px; left:0;}
-        .cta-button {background:#B89B5E; color:#fff; padding:10px 20px; border-radius:5px; font-weight:600;}
-        .cta-button:hover {opacity:0.9;}
+        nav {
+            background: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2B2B2B;
+        }
+
+        .nav-logo span {
+            color: #B89B5E;
+            font-weight: 400;
+            font-size: 16px;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #B89B5E;
+            bottom: -5px;
+            left: 0;
+        }
+
+        /* Highlighted Free Estimate Button */
+        .nav-links .btn-primary {
+            background: #B89B5E;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links .btn-primary:hover {
+            background: #a8894f;
+        }
+
+        .cta-button {
+            background: #B89B5E;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .cta-button:hover {
+            opacity: 0.9;
+        }
 
         /* Hero */
-        .hero {background:#F8F6F2; text-align:center; padding:150px 20px 100px;}
-        .hero h1 {font-family:'Playfair Display', serif; font-size:48px; margin-bottom:20px;}
-        .hero p {font-size:20px; margin-bottom:30px;}
-        .hero .buttons {display:flex; gap:20px; justify-content:center; flex-wrap:wrap;}
-        .hero .btn-outline {border:2px solid #B89B5E; color:#B89B5E; padding:10px 20px; border-radius:5px; font-weight:600; background:#fff;}
-        .hero .btn-outline:hover {opacity:0.9;}
+        .hero {
+            background: #F8F6F2;
+            text-align: center;
+            padding: 150px 20px 100px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero .btn-outline {
+            border: 2px solid #B89B5E;
+            color: #B89B5E;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            background: #fff;
+        }
+
+        .hero .btn-outline:hover {
+            opacity: 0.9;
+        }
 
         /* Section Titles */
-        section h2 {font-family:'Playfair Display', serif; font-size:36px; text-align:center; margin-bottom:30px;}
-        section p {max-width:800px; margin:0 auto 30px auto; text-align:center;}
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section p {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+        }
 
         /* Commercial Trust Section */
-        .trust {background:#EFECE6; padding:80px 20px;}
-        .trust .types {display:flex; justify-content:center; flex-wrap:wrap; gap:20px; font-weight:500;}
+        .trust {
+            background: #EFECE6;
+            padding: 80px 20px;
+        }
+
+        .trust .types {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-weight: 500;
+        }
 
         /* Services */
-        .services {padding:80px 20px; display:flex; justify-content:center; flex-wrap:wrap; gap:30px;}
-        .service-card {background:#fff; padding:30px; justify-content:center;border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.05); flex:1 1 300px; transition:all 0.3s;}
-        .service-card:hover {transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.1);}
-        .service-card h3 {font-family:'Playfair Display', serif; margin-bottom:15px; font-size:24px;}
+        .services {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            flex: 1 1 300px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
 
         /* Legacy Section */
-        .legacy {background:#EFECE6; padding:80px 20px; text-align:center;}
-        .legacy hr {width:80px; border:1px solid #B89B5E; margin:20px auto 40px auto;}
+        .legacy {
+            background: #EFECE6;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .legacy hr {
+            width: 80px;
+            border: 1px solid #B89B5E;
+            margin: 20px auto 40px auto;
+        }
 
         /* Gallery */
-        .gallery {padding:80px 20px; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
+        .gallery {
+            padding: 80px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
         /* CTA Section */
-        .final-cta {background:#F8F6F2; padding:100px 20px; text-align:center;}
-        .final-cta button {margin-top:20px;}
+        .final-cta {
+            background: #F8F6F2;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .final-cta button {
+            margin-top: 20px;
+        }
 
         /* Footer */
-        footer {background:#2B2B2B; color:#fff; padding:40px 20px; text-align:center;}
-        footer a {color:#B89B5E;}
+        footer {
+            background: #2B2B2B;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #B89B5E;
+        }
 
         /* Form */
-        .estimate-form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
-        .estimate-form input, .estimate-form textarea {padding:10px; border:1px solid #ccc; border-radius:5px;}
-        .estimate-form button {background:#B89B5E; color:#fff; padding:12px; border-radius:5px; font-weight:600;}
+        .estimate-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .estimate-form input,
+        .estimate-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .estimate-form button {
+            background: #B89B5E;
+            color: #fff;
+            padding: 12px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
 
         /* Confirmation message */
-        #form-message {margin-top:15px; font-weight:600; color:#2B2B2B;}
+        #form-message {
+            margin-top: 15px;
+            font-weight: 600;
+            color: #2B2B2B;
+        }
     </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav>
-    <div class="nav-logo">BEST OF KENTUCKY<span>Commercial Upholstery | Est. 1965</span></div>
-    <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#legacy">About</a>
-        <a href="#estimate" class="btn btn-primary">Free Estimate</a>
-        <a href="tel:5026360531" class="btn btn-call">Call Now</a>
-    </div>
-</nav>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">BEST OF KENTUCKY<span>Commercial Upholstery | Est. 1965</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#legacy">About</a>
+            <a href="#estimate" class="btn btn-primary">Free Estimate</a>
+            <a href="tel:5026360531" class="btn btn-call">Call Now</a>
+        </div>
+    </nav>
 
-<!-- Hero -->
-<section class="hero" id="home">
-    <h1>Commercial Upholstery Built to Last. Since 1965.</h1>
-    <p>Serving Kentucky businesses with professional reupholstery, refinishing, and repairs.</p>
-    <div class="buttons">
-        <a href="#estimate" class="cta-button">Request an Estimate</a>
-        <a href="tel:5026360531" class="btn-outline">Call Now</a>   
-    </div>
-</section>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <h1>Commercial Upholstery Built to Last. Since 1965.</h1>
+        <p>Serving Kentucky businesses with professional reupholstery, refinishing, and repairs.</p>
+        <div class="buttons">
+            <a href="#estimate" class="cta-button">Request an Estimate</a>
+            <a href="tel:5026360531" class="btn-outline">Call Now</a>
+        </div>
+    </section>
 
-<!-- Commercial Trust -->
-<section class="trust">
-    <h2>Upholstery Solutions for Kentucky Businesses</h2>
-    <div class="types">
-        <div>Restaurants</div>
-        <div>Medical Offices</div>
-        <div>Churches</div>
-        <div>Hospitality</div>
-        <div>Corporate Facilities</div>
-        <div>Senior Living Communities</div>
-    </div>
-</section>
+    <!-- Commercial Trust -->
+    <section class="trust">
+        <h2>Upholstery Solutions for Kentucky Businesses</h2>
+        <div class="types">
+            <div>Restaurants</div>
+            <div>Medical Offices</div>
+            <div>Churches</div>
+            <div>Hospitality</div>
+            <div>Corporate Facilities</div>
+            <div>Senior Living Communities</div>
+        </div>
+    </section>
 
-<!-- Services -->
-<section class="services" id="services">
-    <div class="service-card">
-        <h3>Commercial Reupholstery</h3>
-        <p>Durable materials built for high-traffic environments.</p>
-    </div>
-    <div class="service-card">
-        <h3>Refinishing</h3>
-        <p>Professional restoration of wood frames and structural elements.</p>
-    </div>
-    <div class="service-card">
-        <h3>Repairs</h3>
-        <p>Structural repairs, cushion rebuilds, and seam restoration.</p>
-    </div>
-</section>
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="service-card">
+            <h3>Commercial Reupholstery</h3>
+            <p>Durable materials built for high-traffic environments.</p>
+        </div>
+        <div class="service-card">
+            <h3>Refinishing</h3>
+            <p>Professional restoration of wood frames and structural elements.</p>
+        </div>
+        <div class="service-card">
+            <h3>Repairs</h3>
+            <p>Structural repairs, cushion rebuilds, and seam restoration.</p>
+        </div>
+    </section>
 
-<!-- Legacy -->
-<section class="legacy" id="legacy">
-    <hr>
-    <h2>Three Generations of Craftsmanship</h2>
-    <p>Founded in 1965 by our grandfather, Best of Kentucky has served the local business community for decades. Today, the next generation continues that commitment to quality, reliability, and long-term partnerships.</p>
-</section>
+    <!-- Legacy -->
+    <section class="legacy" id="legacy">
+        <hr>
+        <h2>Three Generations of Craftsmanship</h2>
+        <p>Founded in 1965 by our grandfather, Best of Kentucky has served the local business community for decades.
+            Today, the next generation continues that commitment to quality, reliability, and long-term partnerships.
+        </p>
+    </section>
 
-<!-- Gallery UPDATE WITH IMAGES -->
-<section class="gallery" id="gallery">
-    <img src="images/sample1.jpg" alt="Gallery Image 1">
-    <img src="images/sample2.jpg" alt="Gallery Image 2">
-    <img src="images/sample3.jpg" alt="Gallery Image 3">
-    <img src="images/sample4.jpg" alt="Gallery Image 4">
-    <img src="images/sample5.jpg" alt="Gallery Image 5">
-    <img src="images/sample6.jpg" alt="Gallery Image 6">
-</section>
+    <!-- Gallery UPDATE WITH IMAGES -->
+    <section class="gallery" id="gallery">
+        <img src="images/sample1.jpg" alt="Gallery Image 1">
+        <img src="images/sample2.jpg" alt="Gallery Image 2">
+        <img src="images/sample3.jpg" alt="Gallery Image 3">
+        <img src="images/sample4.jpg" alt="Gallery Image 4">
+        <img src="images/sample5.jpg" alt="Gallery Image 5">
+        <img src="images/sample6.jpg" alt="Gallery Image 6">
+    </section>
 
-<!-- Final CTA / Estimate Form -->
-<section class="final-cta" id="estimate">
-    <h2>Let's Restore Your Space</h2>
-    <p>Request a free commercial estimate today.</p>
-    <form class="estimate-form" id="estimateForm" enctype="multipart/form-data">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number" required>
-        <textarea name="details" placeholder="Project Details" rows="4" required></textarea>
-        <input type="file" name="photos[]" accept="image/*" multiple>
-        <button type="submit">Submit Estimate</button>
-    </form>
-    <div id="form-message"></div>
-</section>
+    <!-- Final CTA / Estimate Form -->
+    <section class="final-cta" id="estimate">
+        <h2>Let's Restore Your Space</h2>
+        <p>Request a free commercial estimate today.</p>
+        <form class="estimate-form" id="estimateForm" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <textarea name="details" placeholder="Project Details" rows="4" required></textarea>
+            <input type="file" name="photos[]" accept="image/*" multiple>
+            <button type="submit">Submit Estimate</button>
+        </form>
+        <div id="form-message"></div>
+    </section>
 
-<!-- Footer -->
-<footer>
-    <p>© 2026 Best of Kentucky. All Rights Reserved.</p>
-    <p>619 W Kentucky St, Louisville, KY 40203 | <a href="tel:6026360531">(502) 636-0531</a> | <a href="mailto:bestofky@aol.com">bestofky@aol.com</a></p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Best of Kentucky. All Rights Reserved.</p>
+        <p>619 W Kentucky St, Louisville, KY 40203 | <a href="tel:6026360531">(502) 636-0531</a> | <a
+                href="mailto:bestofky@aol.com">bestofky@aol.com</a></p>
+    </footer>
 
-<!-- JS Scripts -->
-<script>
-// AJAX form submission
-const form = document.getElementById('estimateForm');
-const formMessage = document.getElementById('form-message');
+    <!-- JS Scripts -->
+    <script>
+        // AJAX form submission
+        const form = document.getElementById('estimateForm');
+        const formMessage = document.getElementById('form-message');
 
-form.addEventListener('submit', function(e){
-    e.preventDefault();
-    formMessage.textContent = 'Sending...';
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            formMessage.textContent = 'Sending...';
 
-    const formData = new FormData(form);
+            const formData = new FormData(form);
 
-    fetch('upload.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        formMessage.textContent = 'Thank you! Your estimate request has been sent. We’ll contact you shortly.';
-        form.reset();
-    })
-    .catch(error => {
-        formMessage.textContent = 'Sorry, there was a problem sending your request. Please try again later.';
-    });
-});
-
-// Mouse trail (desktop only)
-if(window.innerWidth > 768){
-    const trailColor = '#B89B5E';
-    const trailSize = 8;
-    const trailContainer = document.createElement('div');
-    trailContainer.style.position = 'fixed';
-    trailContainer.style.top = '0';
-    trailContainer.style.left = '0';
-    trailContainer.style.pointerEvents = 'none';
-    trailContainer.style.zIndex = '10000';
-    document.body.appendChild(trailContainer);
-
-    const trailDots = [];
-    const maxTrail = 15;
-    for(let i = 0; i < maxTrail; i++){
-        const dot = document.createElement('div');
-        dot.style.width = trailSize + 'px';
-        dot.style.height = trailSize + 'px';
-        dot.style.backgroundColor = trailColor;
-        dot.style.borderRadius = '50%';
-        dot.style.position = 'absolute';
-        dot.style.pointerEvents = 'none';
-        dot.style.opacity = 0;
-        trailContainer.appendChild(dot);
-        trailDots.push({el: dot, x: 0, y: 0});
-    }
-
-    let mouseX = 0;
-    let mouseY = 0;
-    document.addEventListener('mousemove', e => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    function animateTrail(){
-        let x = mouseX;
-        let y = mouseY;
-        trailDots.forEach(dot => {
-            dot.x += (x - dot.x) * 0.2;
-            dot.y += (y - dot.y) * 0.2;
-            dot.el.style.transform = `translate(${dot.x - trailSize/2}px, ${dot.y - trailSize/2}px)`;
-            dot.el.style.opacity = 1;
-            x = dot.x;
-            y = dot.y;
+            fetch('upload.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    formMessage.textContent = 'Thank you! Your estimate request has been sent. We’ll contact you shortly.';
+                    form.reset();
+                })
+                .catch(error => {
+                    formMessage.textContent = 'Sorry, there was a problem sending your request. Please try again later.';
+                });
         });
-        requestAnimationFrame(animateTrail);
-    }
-    animateTrail();
-}
-</script>
+
+        // Mouse trail (desktop only)
+        if (window.innerWidth > 768) {
+            const trailColor = '#B89B5E';
+            const trailSize = 8;
+            const trailContainer = document.createElement('div');
+            trailContainer.style.position = 'fixed';
+            trailContainer.style.top = '0';
+            trailContainer.style.left = '0';
+            trailContainer.style.pointerEvents = 'none';
+            trailContainer.style.zIndex = '10000';
+            document.body.appendChild(trailContainer);
+
+            const trailDots = [];
+            const maxTrail = 15;
+            for (let i = 0; i < maxTrail; i++) {
+                const dot = document.createElement('div');
+                dot.style.width = trailSize + 'px';
+                dot.style.height = trailSize + 'px';
+                dot.style.backgroundColor = trailColor;
+                dot.style.borderRadius = '50%';
+                dot.style.position = 'absolute';
+                dot.style.pointerEvents = 'none';
+                dot.style.opacity = 0;
+                trailContainer.appendChild(dot);
+                trailDots.push({ el: dot, x: 0, y: 0 });
+            }
+
+            let mouseX = 0;
+            let mouseY = 0;
+            document.addEventListener('mousemove', e => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateTrail() {
+                let x = mouseX;
+                let y = mouseY;
+                trailDots.forEach(dot => {
+                    dot.x += (x - dot.x) * 0.2;
+                    dot.y += (y - dot.y) * 0.2;
+                    dot.el.style.transform = `translate(${dot.x - trailSize / 2}px, ${dot.y - trailSize / 2}px)`;
+                    dot.el.style.opacity = 1;
+                    x = dot.x;
+                    y = dot.y;
+                });
+                requestAnimationFrame(animateTrail);
+            }
+            animateTrail();
+        }
+    </script>
 
 </body>
+
 </html>
