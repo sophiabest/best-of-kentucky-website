@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best of Kentucky - Commercial Upholstery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {margin:0; padding:0; box-sizing:border-box;}
+        body {font-family:'Montserrat', sans-serif; color:#2B2B2B; background:#F8F6F2; line-height:1.6;}
+        a {text-decoration:none; color:inherit;}
+        button {cursor:pointer; border:none;}
+        img {max-width:100%; display:block;}
+
+        /* Navigation */
+        nav {background:#fff; padding:20px 50px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 5px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000;}
+        .nav-logo {font-family:'Playfair Display', serif; font-size:24px; font-weight:700; color:#2B2B2B;}
+        .nav-logo span {color:#B89B5E; font-weight:400; font-size:16px; display:block;}
+        .nav-links {display:flex; gap:30px; align-items:center;}
+        .nav-links a {font-weight:500; transition: all 0.3s; position:relative;}
+        .nav-links a:hover::after {content:''; position:absolute; width:100%; height:2px; background:#B89B5E; bottom:-5px; left:0;}
+        .cta-button {background:#B89B5E; color:#fff; padding:10px 20px; border-radius:5px; font-weight:600;}
+        .cta-button:hover {opacity:0.9;}
+
+        /* Hero */
+        .hero {background:#F8F6F2; text-align:center; padding:150px 20px 100px;}
+        .hero h1 {font-family:'Playfair Display', serif; font-size:48px; margin-bottom:20px;}
+        .hero p {font-size:20px; margin-bottom:30px;}
+        .hero .buttons {display:flex; gap:20px; justify-content:center; flex-wrap:wrap;}
+        .hero .btn-outline {border:2px solid #B89B5E; color:#B89B5E; padding:10px 20px; border-radius:5px; font-weight:600; background:#fff;}
+        .hero .btn-outline:hover {opacity:0.9;}
+
+        /* Section Titles */
+        section h2 {font-family:'Playfair Display', serif; font-size:36px; text-align:center; margin-bottom:30px;}
+        section p {max-width:800px; margin:0 auto 30px auto; text-align:center;}
+
+        /* Commercial Trust Section */
+        .trust {background:#EFECE6; padding:80px 20px;}
+        .trust .types {display:flex; justify-content:center; flex-wrap:wrap; gap:20px; font-weight:500;}
+
+        /* Services */
+        .services {padding:80px 20px; display:flex; justify-content:center; flex-wrap:wrap; gap:30px;}
+        .service-card {background:#fff; padding:30px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.05); flex:1 1 300px; transition:all 0.3s;}
+        .service-card:hover {transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.1);}
+        .service-card h3 {font-family:'Playfair Display', serif; margin-bottom:15px; font-size:24px;}
+
+        /* Legacy Section */
+        .legacy {background:#EFECE6; padding:80px 20px; text-align:center;}
+        .legacy hr {width:80px; border:1px solid #B89B5E; margin:20px auto 40px auto;}
+
+        /* Gallery */
+        .gallery {padding:80px 20px; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
+
+        /* CTA Section */
+        .final-cta {background:#F8F6F2; padding:100px 20px; text-align:center;}
+        .final-cta button {margin-top:20px;}
+
+        /* Footer */
+        footer {background:#2B2B2B; color:#fff; padding:40px 20px; text-align:center;}
+        footer a {color:#B89B5E;}
+
+        /* Form */
+        .estimate-form {max-width:500px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
+        .estimate-form input, .estimate-form textarea {padding:10px; border:1px solid #ccc; border-radius:5px;}
+        .estimate-form button {background:#B89B5E; color:#fff; padding:12px; border-radius:5px; font-weight:600;}
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-logo">BEST OF KENTUCKY<span>Commercial Upholstery | Est. 1965</span></div>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#legacy">About</a>
+        <a href="#estimate" class="cta-button">Request Estimate</a>
+        <a href="tel:5026360531">Call Now</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <h1>Commercial Upholstery Built to Last. Since 1965.</h1>
+    <p>Serving Kentucky businesses with professional reupholstery, refinishing, and repairs.</p>
+    <div class="buttons">
+        <button class="cta-button">Request an Estimate</button>
+        <button class="btn-outline">Call Now</button>
+    </div>
+</section>
+
+<!-- Commercial Trust -->
+<section class="trust">
+    <h2>Upholstery Solutions for Kentucky Businesses</h2>
+    <div class="types">
+        <div>Restaurants</div>
+        <div>Medical Offices</div>
+        <div>Churches</div>
+        <div>Hospitality</div>
+        <div>Corporate Facilities</div>
+        <div>Senior Living Communities</div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+    <div class="service-card">
+        <h3>Commercial Reupholstery</h3>
+        <p>Durable materials built for high-traffic environments.</p>
+    </div>
+    <div class="service-card">
+        <h3>Refinishing</h3>
+        <p>Professional restoration of wood frames and structural elements.</p>
+    </div>
+    <div class="service-card">
+        <h3>Repairs</h3>
+        <p>Structural repairs, cushion rebuilds, and seam restoration.</p>
+    </div>
+</section>
+
+<!-- Legacy -->
+<section class="legacy" id="legacy">
+    <hr>
+    <h2>Three Generations of Craftsmanship</h2>
+    <p>Founded in 1965 by our grandfather, Best of Kentucky has served the local business community for decades. Today, the next generation continues that commitment to quality, reliability, and long-term partnerships.</p>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+    <img src="images/sample1.jpg" alt="Gallery Image 1">
+    <img src="images/sample2.jpg" alt="Gallery Image 2">
+    <img src="images/sample3.jpg" alt="Gallery Image 3">
+    <img src="images/sample4.jpg" alt="Gallery Image 4">
+    <img src="images/sample5.jpg" alt="Gallery Image 5">
+    <img src="images/sample6.jpg" alt="Gallery Image 6">
+</section>
+
+<!-- Final CTA / Estimate Form -->
+<section class="final-cta" id="estimate">
+    <h2>Let's Restore Your Space</h2>
+    <p>Request a free commercial estimate today.</p>
+    <form class="estimate-form" action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        <textarea name="details" placeholder="Project Details" rows="4" required></textarea>
+        <input type="file" name="photo" accept="image/*">
+        <button type="submit">Submit Estimate</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Best of Kentucky. All Rights Reserved.</p>
+    <p>619 W Kentucky Street, Louisville, KY 40203 | <a href="tel:5026360531">(502) 636-0531</a> | <a href="mailto:bestofky@aol.com">bestofky@aol.com</a></p>
+</footer>
+
+</body>
+</html>
