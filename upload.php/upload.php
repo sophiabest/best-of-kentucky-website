@@ -1,6 +1,6 @@
 <?php
-// CONFIG: Set your business email here
-$to = 'info@bestofkentucky.com';
+// Replace with your actual business email
+$to = 'bestofky@aol.com';
 $subject = 'New Estimate Request';
 
 // Collect form data
@@ -15,6 +15,7 @@ $message .= "Email: $email\n";
 $message .= "Phone: $phone\n";
 $message .= "Details: $details\n";
 
+// Create boundary
 $boundary = md5(time());
 $headers = "From: $email\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
@@ -25,8 +26,9 @@ $body .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
 $body .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
 $body .= $message . "\r\n";
 
-if(isset($_FILES['photos'])) {
-    foreach($_FILES['photos']['tmp_name'] as $key => $tmp_name) {
+// Handle uploaded files
+if(isset($_FILES['photos'])){
+    foreach($_FILES['photos']['tmp_name'] as $key => $tmp_name){
         $file_name = $_FILES['photos']['name'][$key];
         $file_size = $_FILES['photos']['size'][$key];
         $file_type = $_FILES['photos']['type'][$key];
@@ -48,7 +50,7 @@ if(isset($_FILES['photos'])) {
 
 $body .= "--$boundary--";
 
-if(mail($to, $subject, $body, $headers)) {
+if(mail($to, $subject, $body, $headers)){
     echo 'success';
 } else {
     echo 'error';
